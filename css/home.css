@@ -471,6 +471,42 @@ footer .quick-links-container ul li:hover a {
 }
 
 /* End Footer  */
+/* Start whatsApp button */
+.whatsapp-button {
+    background-color: #64b161;
+    height: 65px;
+    width: 65px;
+    position: fixed;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    right: 15px;
+    bottom: 15px;
+    padding: 10px;
+    box-shadow: 0 0 10px #cabebe;
+    transition: all 1s;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+
+.whatsapp-button a img {
+    position: relative;
+    left: 3px;
+    bottom: -2px;
+    width: 100%;
+    height: 100%;
+}
+
+/* End whatsApp button */
+
+
+
 
 /* Media Queries */
 @media (max-width: 700px) {
@@ -560,6 +596,7 @@ footer .quick-links-container ul li:hover a {
         align-items: center;
 
     }
+
     footer .quick-links-container ul {
         height: 200px;
     }
@@ -571,6 +608,7 @@ footer .quick-links-container ul li:hover a {
     footer .logo-social-container {
         width: 70%;
     }
+
     footer .socail-media-links {
         padding: 0 40px;
     }
