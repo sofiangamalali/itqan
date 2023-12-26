@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Tajawal:wght@200;300;400;500;700;800;900&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --first-color: #248EB1;
+    --second-color: #5CD375;
+    --font-color: #3A407D;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    direction: rtl;
+    font-family: 'Tajawal';
+}
+
+/*  Start Header */
+header {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    padding: 10px 20px;
+    border-width: 2px;
+    background-color: white;
+    border-style: solid;
+    border-image-slice: 1;
+    border-image: linear-gradient(to left, var(--first-color), var(--second-color));
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 2px;
+}
+
+header .logo-container,
+.links-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.links-container {
+    justify-content: space-around;
+    flex: 5;
+}
+
+header .logo-container {
+    margin-right: 20px;
+    flex: 1;
+}
+
+header .logo-container img {
+    height: 100%;
+    cursor: pointer;
+}
+
+header .links-container ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+header .links-container ul li a {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--font-color);
+}
+
+header .links-container ul li a:hover {
+    color: var(--second-color);
+}
+
+/* Icon */
+.burger-icon {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+    cursor: pointer;
+}
+
+.burger-icon .bar {
+    width: 35px;
+    height: 5px;
+    background-color: #5CD375;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+/*  Start Links in Icon */
+.links-in-icon {
+    width: 100%;
+    background-color: #5CD375;
+    top: calc(100% + 2px);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.links-in-icon ul {
+    width: 100%;
+}
+
+.links-in-icon ul li {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.links-in-icon ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.links-in-icon ul li a:hover {
+    color: #3A407D;
+}
+
+/*  End Links in Icon */
+.hidden {
+    display: none;
+}
+
+
+/*  End Header */
+
+/*  Start Silder */
+
+.slider-container {
+    width: 100%;
+    height: calc(100vh - 150px - 2px);
+}
+
+.slider-container .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.slider-container .swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    filter: saturate(44%);
+    -webkit-filter: saturate(44%);
+    -moz-filter: saturate(44%);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: rgba(164, 151, 151, 0.5);
+    color: var(--second-color);
+}
+
+.swiper-pagination {
+    color: var(--second-color);
+}
+
+/*  End Silder */
+/* Start company section */
+.company-section {
+    padding: 0 30px;
+    width: 100%;
+}
+
+.title-container {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.title-container img {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+
+.title-container span {
+    color: var(--font-color);
+}
+
+.content-container {
+    display: flex;
+}
+
+.content {
+    position: relative;
+    margin-right: 50px;
+    min-height: 300px;
+    flex: 1;
+}
+
+.content h3 {
+    color: var(--font-color);
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+}
+
+.spreator {
+    width: 3px;
+    height: inherit;
+    border-radius: 2px;
+    background-image: linear-gradient(to bottom, var(--first-color), var(--second-color));
+}
+
+#first-content {
+    padding-left: 20px;
+}
+
+#second-content {
+    margin-right: 70px;
+}
+
+#first-content::before {
+    position: absolute;
+    content: "";
+    right: -60px;
+    top: -25px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url('../assets/diagram.png');
+    background-size: cover;
+}
+
+#second-content::before {
+    position: absolute;
+    content: "";
+    right: -65px;
+    top: -35px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url('../assets/teaching.png');
+    background-size: cover;
+}
+
+/* End Company Section */
+
+/* Start Services */
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+
+}
+
+.services-container .service-card {
+    min-width: 400px;
+    height: 250px;
+    flex: 1;
+    position: relative;
+    border-radius: 18px;
+}
+
+.services-container .service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.services-container .service-card button {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 500;
+
+    background-color: transparent;
+    border: 2px solid #5CD375;
+    color: white;
+    cursor: pointer;
+    transition: all 1.5s ease-in-out;
+    opacity: 0;
+}
+
+.services-container .service-card:hover button {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    opacity: 1;
+}
+
+.services-container .service-card:hover img {
+    opacity: 0.5;
+}
+
+
+.services-container .service-card button:hover {
+    background-color: #5CD375;
+    border-color: #248EB1;
+}
+
+.services-container .service-card::after {
+    position: absolute;
+    top: -3px;
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
+    background: linear-gradient(to left, var(--first-color), var(--second-color));
+    content: '';
+    z-index: -1;
+    border-radius: 21px;
+}
+
+
+/* End Services */
+
+
+/* Start SignUp section */
+.signup-section {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom, var(--first-color), var(--second-color));
+    height: 200px;
+}
+
+.signup-section button {
+    width: 120px;
+    height: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    color: var(--font-color);
+    border: 2px solid var(--font-color);
+    transition: all 1s;
+}
+
+.signup-section button:hover {
+    background-color: var(--font-color);
+    color: white;
+}
+
+/* end SignUp section */
+
+/* Start Footer  */
+footer {
+    width: 100%;
+    margin-top: 50px;
+    border-style: solid;
+    border-width: 3px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, var(--first-color), var(--second-color));
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50%;
+    padding: 40px 10%;
+}
+
+footer .logo-social-container,
+.quick-links-container {
+    flex: 1;
+    height: 250px;
+    width: 100%;
+}
+
+footer .logo-social-container .socail-media-links {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+
+}
+
+footer .logo-social-container {
+
+    text-align: center;
+}
+
+footer .logo-social-container img {
+    width: 80%;
+    height: 75%;
+}
+
+
+footer .logo-social-container .socail-media-links .link-container {
+    border-radius: 50%;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: 1px solid var(--second-color);
+    background-color: var(--first-color);
+    transition: all 1s;
+}
+
+footer .logo-social-container .socail-media-links .link-container:hover {
+    transform: scale(1.1);
+    background-color: var(--second-color);
+    border: 1px solid var(--first-color);
+}
+
+
+footer .logo-social-container .socail-media-links .link-container img {
+    width: 100%;
+    height: 100%;
+}
+
+footer .quick-links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer .quick-links-container .title {
+    font-size: 20px;
+    display: inline-block;
+    font-weight: bold;
+    padding-bottom: 4px;
+    border-bottom: 3px solid var(--second-color);
+    width: 40%;
+}
+
+footer .quick-links-container ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+footer .quick-links-container ul a {
+    font-size: 22px;
+    color: var(--font-color);
+    font-weight: 500;
+}
+
+footer .quick-links-container ul li {
+    transition: all 0.7s;
+}
+
+footer .quick-links-container ul li:hover {
+    transform: translateX(-10px)
+}
+
+footer .quick-links-container ul li:hover a {
+    color: var(--second-color);
+}
+
+/* End Footer  */
+
+/* Media Queries */
+@media (max-width: 700px) {
+    header .links-container ul li a {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+/* to hide links */
+@media (min-width: 638px) {
+    .links-in-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 637px) {
+
+    /* Start header */
+    header {
+        height: 100px;
+        min-width: 200px;
+    }
+
+    header .links-container {
+        display: none;
+    }
+
+    .burger-icon {
+        display: flex;
+    }
+
+    /* End Header */
+
+    /* Start slider */
+    .slider-container {
+        width: 100%;
+        height: calc(80vh - 100px - 2px);
+
+    }
+
+    /* End  slider */
+    /* Start company */
+    .content-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .spreator {
+        display: none;
+    }
+
+    /* End company */
+    /* Start signup section */
+    .signup-section h1 {
+        font-size: 22px;
+    }
+
+    .signup-section button {
+        font-size: 18px;
+    }
+
+    /* End signup section */
+
+
+}
+
+@media (max-width: 768px) {
+
+    /* Start Footer */
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+        gap: 40px;
+    }
+
+    footer .logo-social-container img {
+        width: 50%;
+        height: 50%;
+    }
+
+    footer .quick-links-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    footer .quick-links-container ul {
+        height: 200px;
+    }
+
+    footer .quick-links-container .title {
+        text-align: center;
+    }
+
+    footer .logo-social-container {
+        width: 70%;
+    }
+    footer .socail-media-links {
+        padding: 0 40px;
+    }
+
+    /* End Footer */
+}
