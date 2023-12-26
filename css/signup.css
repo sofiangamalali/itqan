@@ -149,6 +149,11 @@ header .links-container ul li a:hover {
     border-top: none;
     border-left: none;
     border-right: none;
+    margin-bottom: 10px;
+}
+.signup-container span {
+    color: var(--font-color);
+    font-size: 18px;
 }
 
 form {
