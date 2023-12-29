@@ -127,107 +127,159 @@ header .links-container ul li a:hover {
 
 
 /*  End Header */
-/* Start About us sectinon */
-.about-us-container {
+/* Start seervices container */
+.services-title {
+    margin-top: 40px;
     display: flex;
-    margin: 20px;
-    margin-top: 50px;
-    gap: 40px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.about-us-container .img-container {
+.services-title h1 {
+    border-style: solid;
+    border-width: 3px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, var(--first-color), var(--second-color));
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.services-container .about-services h2 {
+    margin-bottom: 10px;
+}
+
+.services-container .about-services span {
+    color: var(--font-color);
+
+}
+
+.services-container .about-services p {
+    font-size: 18px;
+    color: #6a6a6a;
+    margin-bottom: 10px;
+}
+
+.services-container .about-services>p {
+    line-height: 24px;
+    margin-bottom: 40px;
+}
+
+.services-container .about-services .services-point {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.services-container .about-services .services-point .icon-container {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--second-color);
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-container .about-services .services-point .icon-container div {
+    width: 65%;
+    height: 65%;
+    border-radius: 50%;
+    background-color: var(--second-color);
+
+}
+
+.services-container .services-types {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.spreator {
+    width: 3px;
+    height: inherit;
+    border-radius: 2px;
+    background-image: linear-gradient(to bottom, var(--first-color), var(--second-color));
+}
+.services-container .service-card {
+    min-width: 400px;
+    height: 300px;
     flex: 1;
+    position: relative;
+    border-radius: 18px;
 }
 
-.about-us-container .img-container img {
+.services-container .service-card img {
     width: 100%;
     height: 100%;
-    min-width: 300px;
+    object-fit: cover;
+    border-radius: inherit;
 }
 
-.about-us-container .text-and-values {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-.about-us-container .text-and-values .title-container span{
-    color: var(--font-color);
-
-}
-
-.about-us-container .text-and-values .content-container {
-    margin-top: 20px;
-}
-.about-us-container .text-and-values .content-container p {
-    line-height: 25px;
-    color: #6a6a6a;
-    font-size: 18px;
-}
-
-.about-us-container .text-and-values .content-container .values-container {
-    margin-top: 20px;
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.about-us-container .text-and-values .content-container .values-row {
-    display: flex;
-    flex: 1;
-    margin: 10px;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.about-us-container .text-and-values .content-container .values-row .value-container {
-    border-radius: 10px;
-    border: 1px solid var(--second-color);
-    width: 100%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-
-.about-us-container .text-and-values .content-container .values-row .value-container span {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.about-us-container .text-and-values .button-container {
-    display: flex;
-    justify-content: center;
-}
-
-.about-us-container .text-and-values .button-container button {
-    width: 200px;
+.services-container .service-card button {
+    width: 100px;
     height: 50px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 500;
+
     background-color: transparent;
-    color: var(--font-color);
-    border: 2px solid var(--font-color);
-    transition: all 1s;
-}
-.about-us-container .text-and-values .button-container button:hover {
-    background-color: var(--font-color);
+    border: 2px solid #5CD375;
     color: white;
+    cursor: pointer;
+    transition: all 1.5s ease-in-out;
+    opacity: 0;
 }
 
-/* End About us sectinon */
+.services-container .service-card:hover button {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    opacity: 1;
+}
+
+.services-types .service-card:hover img {
+    opacity: 0.5;
+}
+
+
+.services-types .service-card button:hover {
+    background-color: #5CD375;
+    border-color: #248EB1;
+}
+
+.services-types .service-card::after {
+    position: absolute;
+    top: -3px;
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
+    background: linear-gradient(to left, var(--first-color), var(--second-color));
+    content: '';
+    z-index: -1;
+    border-radius: 21px;
+}
+/* End services container */
+
 /* Start Footer  */
 footer {
     width: 100%;
     margin-top: 50px;
     border-style: solid;
-    border-width: 3px;
+    border-width: 2px;
     border-image-slice: 1;
     border-image-source: linear-gradient(to left, var(--first-color), var(--second-color));
     border-bottom: none;
@@ -407,11 +459,13 @@ footer .quick-links-container ul li:hover a {
     /* End Header */
 
 }
+
 @media (max-width: 900px) {
-    .about-us-container  {
+    .about-us-container {
         flex-direction: column;
     }
 }
+
 @media (max-width: 768px) {
 
     /* Start Footer */
@@ -456,7 +510,8 @@ footer .quick-links-container ul li:hover a {
     .about-us-container .text-and-values .content-container .values-row .value-container span {
         font-size: 16px;
     }
+
     .about-us-container .text-and-values .content-container .values-row {
-    gap: 10px;
-}
+        gap: 10px;
+    }
 }
